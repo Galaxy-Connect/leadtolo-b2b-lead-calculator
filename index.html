@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Free B2B Lead Cost Calculator from Galaxy Connect. Calculate cost per acquired lead, usable lead and qualified prospect.">
+  <title>LeadLens — B2B Lead Cost Calculator | Galaxy Connect</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#081221;color:#eef6ff;color-scheme:dark}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 70% 0%,#12325a 0,#081221 60%);line-height:1.5}
+    a{color:#69d5ff;text-decoration:none}a:hover{text-decoration:underline}
+    .wrap{width:min(1040px,calc(100% - 36px));margin:0 auto;padding:34px 0 55px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:53px}
+    .brand{display:flex;gap:11px;align-items:center;color:#fff;font-size:16px;font-weight:750;letter-spacing:-.02em}
+    .brandlogo{width:49px;height:49px;display:block;flex-shrink:0;object-fit:contain;border-radius:11px}
+    .navlink{font-size:13px;padding:8px 12px;border:1px solid #2c4058;border-radius:10px}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#61d6eb;font-weight:750}
+    h1{font-size:clamp(34px,5vw,59px);line-height:1.09;letter-spacing:-.055em;margin:14px 0}
+    .intro{max-width:730px;color:#a9bcd0;font-size:16px;margin:0 0 36px}
+    .layout{display:grid;grid-template-columns:1fr 1.03fr;gap:20px;align-items:start}
+    .card{border:1px solid #25415d;border-radius:22px;background:linear-gradient(155deg,#122740,#0d1d30);padding:26px;box-shadow:0 15px 45px #020a1670}
+    .card h2{font-size:19px;letter-spacing:-.03em;margin:0 0 6px}
+    .sub{font-size:13px;color:#9fb4c9;margin:0 0 25px}
+    .field{margin-bottom:19px}
+    label{display:block;font-size:13px;font-weight:670;margin:0 0 7px}
+    .hint{font-size:12px;color:#90a8c0;margin:5px 0 0}
+    .inputwrap{position:relative}
+    .prefix{position:absolute;top:50%;left:15px;transform:translateY(-50%);color:#9fb4c9;font-weight:650}
+    input{display:block;width:100%;height:49px;border-radius:11px;border:1px solid #3a5270;background:#08172b;color:#fff;font-size:17px;font-weight:650;padding:10px 15px;outline:none;transition:.2s}
+    input.money{padding-left:37px}
+    input:focus{border-color:#55cfea;box-shadow:0 0 0 3px #26abcb24}
+    input::placeholder{color:#60748b}
+    .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:23px}
+    button{font:inherit;font-size:13px;font-weight:700;padding:11px 15px;cursor:pointer;border-radius:10px;border:1px solid #395875;background:#162c44;color:#e5f3ff}
+    button:hover{background:#1c3a58}button.primary{background:linear-gradient(105deg,#1aaad8,#2371df);border:0;color:#fff}
+    .notice{min-height:20px;color:#ffc4b5;font-size:12px;margin:12px 0 0}
+    .resultHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:18px}
+    .pill{font-size:11px;color:#8de6e1;border:1px solid #285b65;border-radius:20px;padding:5px 9px}
+    .heroStat{background:linear-gradient(128deg,#15385a,#10293e);border:1px solid #2b6b8e;border-radius:16px;padding:20px;margin-bottom:14px}
+    .statLabel{font-size:12px;color:#b1c4d5}
+    .statValue{font-size:39px;letter-spacing:-.05em;font-weight:800;margin:5px 0}
+    .desc{font-size:12px;color:#a2bace}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+    .metric{background:#09192d;border:1px solid #23415f;border-radius:14px;padding:15px;min-height:100px}
+    .metric strong{display:block;font-size:25px;letter-spacing:-.035em;margin-top:7px}
+    .metric small{color:#9fb4ca;font-size:12px}
+    .explain{font-size:12px;color:#a9bdd0;margin:20px 0 0;padding-top:17px;border-top:1px solid #29415a}
+    .tip{margin-top:21px;border:1px solid #1f4355;background:#0b2334;border-radius:14px;padding:16px 18px;color:#adc6d7;font-size:13px}
+    .tip b{color:#dcefff}
+    footer{border-top:1px solid #243d55;margin-top:43px;padding-top:21px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#86a1b9}
+    @media(max-width:760px){.wrap{width:min(100% - 28px,600px)}.nav{margin-bottom:32px}.layout{grid-template-columns:1fr}.card{padding:20px}.statValue{font-size:34px}}
+    @media(max-width:420px){.metrics{grid-template-columns:1fr}.navlink{font-size:11px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="https://www.galaxyconnect.in/" target="_blank" rel="noopener noreferrer" aria-label="Galaxy Connect website"><img class="brandlogo" src="./logo.webp" alt="" width="49" height="49"><span>Galaxy Connect</span></a>
+    <a class="navlink" href="https://www.galaxyconnect.in/" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
+  </header>
+  <main>
+    <div class="eyebrow">Free sales planning tool</div>
+    <h1>B2B Lead Cost<br>Calculator<span style="color:#35c8e8">.</span></h1>
+    <p class="intro">Know what your lead acquisition really costs. Compare your total leads with usable contacts and qualified prospects—without spreadsheets.</p>
+    <div class="layout">
+      <section class="card" aria-labelledby="inputTitle">
+        <h2 id="inputTitle">Your campaign numbers</h2>
+        <p class="sub">Enter figures for one campaign or database purchase.</p>
+        <div class="field"><label for="spend">Total amount spent</label><div class="inputwrap"><span class="prefix" id="symbol">₹</span><input class="money" id="spend" type="number" min="0" step="0.01" inputmode="decimal" value="5000" aria-describedby="spendHint"></div><div class="hint" id="spendHint">Include purchase cost and any other acquisition spend you want to measure.</div></div>
+        <div class="field"><label for="leads">Total leads acquired</label><input id="leads" type="number" min="0" step="1" inputmode="numeric" value="500"></div>
+        <div class="field"><label for="usable">Usable leads</label><input id="usable" type="number" min="0" step="1" inputmode="numeric" value="375"><div class="hint">Contacts you consider relevant and usable by your team's criteria.</div></div>
+        <div class="field"><label for="qualified">Qualified prospects</label><input id="qualified" type="number" min="0" step="1" inputmode="numeric" value="45"><div class="hint">Prospects who meet your chosen qualification criteria.</div></div>
+        <div class="field"><label for="currency">Currency</label><select id="currency" style="display:block;width:100%;height:44px;border:1px solid #3a5270;border-radius:11px;background:#08172b;color:#eef6ff;font-size:14px;padding:9px 12px"><option value="INR">INR — Indian Rupee</option><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — British Pound</option></select></div>
+        <div class="actions"><button type="button" class="primary" id="example">Load example</button><button type="button" id="reset">Clear fields</button></div>
+        <div id="notice" class="notice" role="alert" aria-live="polite"></div>
+      </section>
+      <section class="card" aria-labelledby="resultTitle">
+        <div class="resultHead"><h2 id="resultTitle">Cost breakdown</h2><span class="pill">Updates instantly</span></div>
+        <div class="heroStat"><div class="statLabel">Cost per usable lead</div><div id="usableCost" class="statValue" aria-live="polite">—</div><div class="desc">Total spend ÷ usable leads</div></div>
+        <div class="metrics">
+          <div class="metric"><small>Cost per acquired lead</small><strong id="leadCost">—</strong></div>
+          <div class="metric"><small>Cost per qualified prospect</small><strong id="qualifiedCost">—</strong></div>
+          <div class="metric"><small>Usable lead rate</small><strong id="usableRate">—</strong></div>
+          <div class="metric"><small>Qualified / acquired</small><strong id="qualifiedRate">—</strong></div>
+        </div>
+        <p class="explain">These are planning metrics based entirely on your inputs. They do not predict sales or verify the quality, legality or consent status of any contact data.</p>
+        <div class="tip"><b>Helpful practice:</b> Compare lead sources using the same qualification rules and time period. Contact count alone doesn't tell you the true cost of prospecting.</div>
+      </section>
+    </div>
+  </main>
+  <footer><div>Created by <a href="https://www.galaxyconnect.in/" target="_blank" rel="noopener noreferrer">Galaxy Connect</a> · B2B/B2C database and lead management solutions</div><div>No account required · Calculations stay in your browser</div></footer>
+</div>
+<script>
+(() => {
+  'use strict';
+  const ids=['spend','leads','usable','qualified'];
+  const el=id=>document.getElementById(id);
+  const read=id=>{const s=el(id).value.trim();return s===''?null:Number(s)};
+  function update(){
+    const v=Object.fromEntries(ids.map(id=>[id,read(id)]));
+    const currency=el('currency').value;
+    const symbol={INR:'₹',USD:'$',EUR:'€',GBP:'£'}[currency];
+    el('symbol').textContent=symbol;
+    const fmt=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency,minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+    const money=(divisor)=>divisor>0&&v.spend!==null?fmt(v.spend/divisor):'—';
+    const rate=(numer,denom)=>denom>0&&numer!==null?`${(100*numer/denom).toFixed(1)}%`:'—';
+    const invalid=Object.values(v).some(n=>n!==null&&(!Number.isFinite(n)||n<0)) || ['leads','usable','qualified'].some(id=>v[id]!==null&&!Number.isInteger(v[id])) || (v.leads!==null&&v.usable!==null&&v.usable>v.leads) || (v.usable!==null&&v.qualified!==null&&v.qualified>v.usable);
+    const notice=invalid?'Check your numbers: enter non-negative values, with qualified prospects ≤ usable leads ≤ acquired leads.':'';
+    el('notice').textContent=notice;
+    if(invalid || Object.values(v).some(n=>n===null)){
+      ['usableCost','leadCost','qualifiedCost','usableRate','qualifiedRate'].forEach(id=>el(id).textContent='—');
+      return;
+    }
+    el('usableCost').textContent=money(v.usable);
+    el('leadCost').textContent=money(v.leads);
+    el('qualifiedCost').textContent=money(v.qualified);
+    el('usableRate').textContent=rate(v.usable,v.leads);
+    el('qualifiedRate').textContent=rate(v.qualified,v.leads);
+  }
+  [...ids,'currency'].forEach(id=>el(id).addEventListener('input',update));
+  el('example').addEventListener('click',()=>{const values={spend:5000,leads:500,usable:375,qualified:45};ids.forEach(id=>el(id).value=values[id]);el('currency').value='INR';update()});
+  el('reset').addEventListener('click',()=>{ids.forEach(id=>el(id).value='');update();el('spend').focus()});
+  update();
+})();
+</script>
+</body>
+</html>
