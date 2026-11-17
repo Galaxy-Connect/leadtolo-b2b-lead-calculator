@@ -1,14 +1,14 @@
-# LeadLens — Free B2B Lead Cost Calculator
+# LeadTolo — Free B2B Lead Cost Calculator
 
-**Calculate cost per lead (CPL), cost per usable lead, and cost per qualified prospect with a free online calculator.** LeadLens helps B2B sales teams, agencies, startups, and small businesses understand the actual cost of acquiring business leads, whether they buy contact databases or run digital marketing campaigns.
+**Calculate cost per lead (CPL), cost per usable lead, and cost per qualified prospect with a free online calculator.** LeadTolo helps B2B sales teams, agencies, startups, and small businesses understand the actual cost of acquiring business leads, whether they buy contact databases or run digital marketing campaigns.
 
 Built by **[Galaxy Connect](https://www.galaxyconnect.in/)**. Open source, no sign-up required, and calculations stay in your browser.
 
 **[Open the free B2B Lead Cost Calculator →](https://huggingface.co/spaces/galaxyconnectindia/b2b-lead-calculator)** · [Source code](index.html) · [About Galaxy Connect](https://www.galaxyconnect.in/)
 
-## What does LeadLens calculate?
+## What does LeadTolo calculate?
 
-Most lead generation reports show **cost per acquired lead**, but that number does not tell you how many contacts are usable or qualify as potential customers. LeadLens breaks the same acquisition spend into five practical metrics:
+Most lead generation reports show **cost per acquired lead**, but that number does not tell you how many contacts are usable or qualify as potential customers. LeadTolo breaks the same acquisition spend into five practical metrics:
 
 | Metric | Formula | What it tells you |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ These figures are hypothetical:
 
 Source A is cheaper per acquired contact, but Source B is cheaper per usable contact in this example. It is important to compare sources using the same time frame and usability rules.
 
-## How to use LeadLens
+## How to use LeadTolo
 
 1. **[Open the live calculator](https://huggingface.co/spaces/galaxyconnectindia/b2b-lead-calculator)** in your browser.
 2. Enter the total amount spent on acquiring the leads you want to evaluate.
@@ -88,15 +88,15 @@ Cost per lead includes all acquired leads. Cost per qualified prospect counts on
 
 Yes. Enter your total database purchase spend, number of acquired records, the number your team considers usable, and those that meet your qualification criteria. The calculator works with lead databases, advertising enquiries, and other acquisition sources. It does **not** validate the database itself.
 
-### Does LeadLens verify phone numbers, emails, or consent?
+### Does LeadTolo verify phone numbers, emails, or consent?
 
-No. LeadLens only calculates metrics from the totals you provide. It does not check whether contacts are active, accurate, lawfully sourced, opted in, or suitable for marketing communications. Always assess data use permissions and applicable rules separately.
+No. LeadTolo only calculates metrics from the totals you provide. It does not check whether contacts are active, accurate, lawfully sourced, opted in, or suitable for marketing communications. Always assess data use permissions and applicable rules separately.
 
 ### Are my campaign numbers saved or uploaded?
 
 No. This version performs calculations locally in your browser. There is no account registration and the tool does not send the entered campaign figures to a server.
 
-### Is LeadLens a CRM or a sales forecasting tool?
+### Is LeadTolo a CRM or a sales forecasting tool?
 
 No. It is a focused lead acquisition cost calculator. It does not manage contact records, predict conversion, or guarantee ROI.
 
