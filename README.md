@@ -4,7 +4,7 @@
 
 Built by **[Galaxy Connect](https://www.galaxyconnect.in/)**. Open source, no sign-up required, and calculations stay in your browser.
 
-**[Open the free B2B Lead Cost Calculator →](https://huggingface.co/spaces/galaxyconnectindia/b2b-lead-calculator)** · [Source code](index.html) · [About Galaxy Connect](https://www.galaxyconnect.in/)
+**[Try LeadTolo — Free B2B Lead Cost Calculator →](https://galaxy-connect.github.io/leadtolo-b2b-lead-calculator/)** · [GitHub source code](index.html) · [Hugging Face version](https://huggingface.co/spaces/galaxyconnectindia/b2b-lead-calculator) · [Galaxy Connect](https://www.galaxyconnect.in/)
 
 ## What does LeadTolo calculate?
 
@@ -67,7 +67,7 @@ Source A is cheaper per acquired contact, but Source B is cheaper per usable con
 
 ## How to use LeadTolo
 
-1. **[Open the live calculator](https://huggingface.co/spaces/galaxyconnectindia/b2b-lead-calculator)** in your browser.
+1. **[Open the live LeadTolo calculator](https://galaxy-connect.github.io/leadtolo-b2b-lead-calculator/)** in your browser.
 2. Enter the total amount spent on acquiring the leads you want to evaluate.
 3. Enter the number of acquired leads, usable leads, and qualified prospects.
 4. Choose your currency. Review the live cost and percentage breakdown.
